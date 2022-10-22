@@ -18,10 +18,13 @@ const palette = document.getElementById('colorPalette');
 const smallbtn = document.getElementById('small');
 const mediumbtn = document.getElementById('medium');
 const largebtn = document.getElementById('large');
+const clearbtn = document.getElementById('clear');
 let mouseColor = '#2c3e50';
 let mouseDown = false;
+let size;
 
-function createCanvas(size = 32){
+function createCanvas(value = 32){
+    size = value;
     canvas.innerHTML = '';
     canvas.style.gridTemplateColumns = `repeat(${size}, auto)`;
     for(let i=1; i<= size*size; i++){
@@ -56,16 +59,19 @@ function setMouseColor(color){
     document.getElementsByTagName('head')[0].appendChild(style); 
 }
 function changeColor(e){
-    console.log(mouseDown);
     if (e.type === 'mouseenter' && !mouseDown)
         return;
     e.target.style.backgroundColor = mouseColor;
 }
 
-createCanvas();
-createPalette();
-setMouseColor(mouseColor);
-
 smallbtn.addEventListener('click', ()=> createCanvas(16));
 mediumbtn.addEventListener('click', ()=> createCanvas(32));
 largebtn.addEventListener('click', ()=> createCanvas(64));
+clearbtn.addEventListener('click',()=> createCanvas(size))
+
+window.onload = () =>{
+    createCanvas();
+    createPalette();
+    setMouseColor(mouseColor);
+}
+;

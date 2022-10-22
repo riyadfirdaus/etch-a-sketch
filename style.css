@@ -21,8 +21,9 @@ header{
     background-color: #AAAAAA;
 }
 #canvasGrid{
-    width: 460px;
-    height: 460px;
+    min-width: 460px;
+    min-height: 460px;
+    max-height: 460px;
 }
 #colorPalette{
     width: auto;
@@ -59,13 +60,21 @@ footer{
 ul{
     padding: 0;
     display: flex;
-    flex-direction: row;
     gap: 16px;
     list-style-type: none;
-    flex-flow: wrap;
+    flex-flow: row wrap;
+    justify-content: center;
 }
+
+ul button{
+    flex:auto;
+}
+
 .bottomButton{
     display:flex;
     flex:auto;
+}
+#reset{
+    width: 10rem;
 }
 
