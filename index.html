@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="button.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Etch-A-Sketch!</h1>
+    </header>
+    <section class="mainContent">
+      <div class="container">
+        <h3>Color Palette</h3>
+        <div class="gridContainer" id="colorPalette"></div>
+        <div id="modeControl">
+          <h3>Color Mode</h3>
+          <ul>
+            <li><button id="rainbowMode">Rainbow</button></li>
+            <li><button id="randomMode">Random</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="gridContainer" id="canvasGrid"></div>
+      <div class="container">
+        <section id="sizeControl">
+          <h3>Size</h3>
+          <ul>
+            <li><button id="small">Small</button></li>
+            <li><button id="medium">Medium</button></li>
+            <li><button id="large">Large</button></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+    <section class="bottomButton">
+      <ul>
+        <li><button id="reset">Reset</button></li>
+        <li><button>Save</button></li>
+      </ul>
+    </section>
+  </body>
+</html>

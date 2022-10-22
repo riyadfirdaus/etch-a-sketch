@@ -1,0 +1,71 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    text-align: center;
+}
+
+.mainContent{
+    display: flex ;
+    justify-content: center;
+    margin: 20px 30px 0px;
+    justify-content: space-around;
+}
+
+.gridContainer{
+    border:solid #1F2937;
+    display: inline-grid;
+    grid-gap: 1px;
+    background-color: #AAAAAA;
+}
+#canvasGrid{
+    width: 460px;
+    height: 460px;
+}
+#colorPalette{
+    width: auto;
+    height: 200px;
+}
+
+#canvasGrid div {
+    background-color: #ffffff;
+}
+.mainContent > .container{
+    margin: 0 10px;
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.bottomButton{
+    margin: 20px;
+    display:flex;
+    justify-content: center;
+}
+
+footer{
+    background-color: #1F2937;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+ul{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    list-style-type: none;
+    flex-flow: wrap;
+}
+.bottomButton{
+    display:flex;
+    flex:auto;
+}
+
