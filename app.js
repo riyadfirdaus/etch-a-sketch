@@ -28,6 +28,8 @@ const clearbtn = document.getElementById('clear');
 const rainbowModeBtn= document.getElementById('rainbowMode');
 const randomModeBtn= document.getElementById('randomMode');
 const eraserBtn= document.getElementById('eraser');
+const createCanvasBtn= document.getElementById('createCanvas');
+const sizeValue = document.getElementById('sizeValue');
 
 let mouseColor = '#2c3e50';
 let rainbowCounter = 0;
@@ -98,11 +100,21 @@ function getRandomColor(){
     let i = Math.floor(Math.random()*20);
     return colorPalette[i];
 }
+function updateSizeValue(value) {
+    sizeValue.innerHTML = `${value} x ${value}`
+}
 
 smallbtn.addEventListener('click', () => createCanvas(16));
 mediumbtn.addEventListener('click', () => createCanvas(32));
 largebtn.addEventListener('click', () => createCanvas(64));
 clearbtn.addEventListener('click',() => createCanvas(size));
+createCanvasBtn.addEventListener('click', () => createCanvas(size));
+sizeSlider.addEventListener('change', (e) =>{
+    size = e.target.value;
+    console.log(size);
+});
+sizeSlider.addEventListener('mousemove', (e)=> updateSizeValue(e.target.value));
+
 eraserBtn.addEventListener('click', () =>{
     currentMode = 'eraser';
     setMouseColor('#ffffff');

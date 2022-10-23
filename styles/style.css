@@ -89,6 +89,7 @@ ul button{
     flex-direction: column;
 }
 #customSize div{
+    text-align: center;
     display: flex;
     flex-direction: column;
 }

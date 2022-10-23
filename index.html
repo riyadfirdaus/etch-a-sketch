@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <title>Etch-A-Sketch</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="button.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/button.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto"
     />
-    <script src="main.js" defer></script>
+    <script src="app.js" defer></script>
   </head>
   <body ondragstart="return false;" ondrop="return false;">
     <header>
@@ -37,6 +37,12 @@
             <button id="medium">Medium</button>
             <button id="large">Large</button>
           </ul>
+          <div id="customSize">
+            <h3>Custom Size</h3>
+            <div id="sizeValue">16 x 16</div>
+            <input id="sizeSlider" type="range" value="16" min="1" max="64" />
+            <button id="createCanvas">Create New Canvas</button>
+          </div>
         </section>
       </div>
     </section>
