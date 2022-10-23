@@ -11,7 +11,7 @@
     />
     <script src="main.js" defer></script>
   </head>
-  <body>
+  <body ondragstart="return false;" ondrop="return false;">
     <header>
       <h1>Etch-A-Sketch!</h1>
     </header>
@@ -19,7 +19,14 @@
       <div class="container">
         <h3>Color Palette</h3>
         <div class="gridContainer" id="colorPalette"></div>
-        <div id="modeControl"></div>
+        <div id="modeControl">
+          <h3>Color Mode</h3>
+          <ul>
+            <button id="rainbowMode">Rainbow</button>
+            <button id="randomMode">Random</button>
+            <button id="eraser">Eraser</button>
+          </ul>
+        </div>
       </div>
       <div class="gridContainer" id="canvasGrid"></div>
       <div class="container">

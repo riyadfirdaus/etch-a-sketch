@@ -1,3 +1,8 @@
+*, *::after, *::before {
+    -webkit-user-drag: none;
+    -webkit-app-region: no-drag;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -15,7 +20,8 @@ header{
 }
 
 .gridContainer{
-    border:solid #1F2937;
+    border:solid 0.5px #AAAAAA;
+    box-shadow: 0px 0px 1px rgb(46, 46, 46);
     display: inline-grid;
     grid-gap: 1px;
     background-color: #AAAAAA;
@@ -78,3 +84,11 @@ ul button{
     width: 10rem;
 }
 
+#customSize{
+    display: flex;
+    flex-direction: column;
+}
+#customSize div{
+    display: flex;
+    flex-direction: column;
+}
