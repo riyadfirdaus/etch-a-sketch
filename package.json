@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/riyadfirdaus/etch-a-sketch#readme",
   "devDependencies": {
-    "eslint": "^8.25.0"
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0"
   }
 }

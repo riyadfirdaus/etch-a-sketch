@@ -30,6 +30,8 @@ const randomModeBtn= document.getElementById('randomMode');
 const eraserBtn= document.getElementById('eraser');
 const createCanvasBtn= document.getElementById('createCanvas');
 const sizeValue = document.getElementById('sizeValue');
+const sizeSlider = document.getElementById('sizeSlider');
+const colorPicker = document.getElementById('colorPicker');
 
 let mouseColor = '#2c3e50';
 let rainbowCounter = 0;
@@ -128,6 +130,8 @@ randomModeBtn.addEventListener('click', () =>{
     currentMode = 'random';
     setMouseColor(getRandomColor);
 });
+
+colorPicker.addEventListener('change', (e) => setMouseColor(e.target.value));
 
 window.onload = () =>{
     createCanvas();
